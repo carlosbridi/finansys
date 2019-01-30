@@ -6,7 +6,7 @@ export class InMemoryDatabase implements InMemoryDbService {
 
     createDb(){
         const categories: Category[] = [
-            {id: 1, name: "MOradia", description: "Pagamentos de conta da casa"},
+            {id: 1, name: "Moradia", description: "Pagamentos de conta da casa"},
             {id: 2, name: "Saúde", description: "Gastos com saúde"},
             {id: 3, name: "Salário", description: "Recebimento do salário"},
             {id: 4, name: "Lazer", description: "Gastos diversos"},
