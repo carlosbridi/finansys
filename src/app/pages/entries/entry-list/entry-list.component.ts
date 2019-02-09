@@ -11,7 +11,7 @@ import { elementAttribute } from '@angular/core/src/render3';
 })
 export class EntryListComponent implements OnInit {
 
-  entries: Entry[] = [];
+  public entries: Entry[] = [];
 
   constructor(private entryService: EntryService) { }
 

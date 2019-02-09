@@ -25,7 +25,6 @@ export class EntryService {
   }
 
   getById(id: number): Observable<Entry>{
-
     const url = `${this.apiPath}/${id}`;
     return this.http.get(url).pipe(
       catchError(this.handleError),
@@ -63,13 +62,13 @@ export class EntryService {
   }
 
   private jsonDataToEntry(jsonData: any): Entry{
-    return jsonData as Entry;
+    return Object.assign(new Entry, jsonData);
   }
 
   private jsonDataToEntries(jsonData: any[]): Entry[]{
     const entries: Entry[] = [];
 
-    jsonData.forEach(element => entries.push(element as Entry))
+    jsonData.forEach(element => entries.push(Object.assign(new Entry, element)));
 
     return entries;
   }
